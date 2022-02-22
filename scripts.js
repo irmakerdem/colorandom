@@ -6,3 +6,4 @@
 // feature/4-lock-colors
 // feature/5-delete-saved-palette
 // feature/initial-readme
+// extensions if we have time
