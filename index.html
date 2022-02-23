@@ -1,53 +1,67 @@
-// feature/0-initial-page-layout
-// on page load, show title
-// 5 colors
-  //with their hex codes underneath
-  //with an unlocked emoji next to hex code
-// 2 buttons
-  //New Random Palette
-  //Save This Palette
-// Saved Palettes Section
+<!-- feature/0-initial-page-layout
+on page load, show title
+  5 colors
+    with their hex codes underneath
+    with an unlocked emoji next to hex code
+MINI PALATTES?? -->
 
 
-<main>
-  <h1>Colorandom</h1>
-  <color SECTION>
-    <div1>
-      <square color hidden >
-      <hex code hidden>
-      <lock hidden>
-    <div2>
-      <square color>
-      <hex code>
-      <lock>
-    <div3>
-      <square color>
-      <hex code>
-      <lock>
-    <div4>
-      <square color>
-      <hex code>
-      <lock>
-    <div5>
-      <square color>
-      <hex code>
-      <lock>
-  <buttons SECTION>
-    <button1>
-    <button2>
-  <nav>
-    <h2>Saved Palettes</h2>
-    <SECTION>
-      <trash icon>
-        <mini colors, hide hex, hide lock>
-      <trash icon>
-        <mini colors, hide hex, hide lock>
-      <trash icon>
-        <mini colors, hide hex, hide lock>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>ColoRandom</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="page-title">Colorandom</h1>
+      <section class="color-section">
+        <article class="box" id="box-1">
+          <section class="color-block hidden" id="color-block-1">
+          <p class="hex-code hidden" id="hex-code-1">
+          <img class="lock" id="lock-1" src="./assets/XXXXXXX.jpg" alt="black lock icon">
+        </article>
+        <article class="box" id="box-2">
+          <section class="color-block hidden" id="color-block-2">
+          <p class="hex-code hidden" id="hex-code-2">
+          <img class="lock" id="lock-2" src="./assets/XXXXXXX.jpg" alt="black lock icon">
+        </article>
+        <article class="box" id="box-3">
+          <section class="color-block hidden" id="color-block-3">
+          <p class="hex-code hidden" id="hex-code-3">
+          <img class="lock" id="lock-3" src="./assets/XXXXXXX.jpg" alt="black lock icon">
+        </article>
+        <article class="box" id="box-4">
+          <section class="color-block hidden" id="color-block-4">
+          <p class="hex-code hidden" id="hex-code-4">
+          <img class="lock" id="lock-4" src="./assets/XXXXXXX.jpg" alt="black lock icon">
+        </article>
+        <article class="box" id="box-5">
+          <section class="color-block hidden" id="color-block-5">
+          <p class="hex-code hidden" id="hex-code-5">
+          <img class="lock" id="lock-5" src="./assets/XXXXXXX.jpg" alt="black lock icon">
+        </article>
+      </section>
+      <section class="main-buttons">
+        <button>New Random Palette</button>
+        <button>Save This Palette</button>
+      </section>
+    </main>
+    <article class="side-bar">
+      <h2 class="saved-palettes">Saved Palettes</h2>
+      <section>
+        <button class="delete-button hidden">DELETE</button>
+      </section>
+    </article>
+    <script src="./src/scripts.js"></script>
+  </body>
+</html>
 
 
-//WHY IS THIS IMPORTANT FOR TODAY'S GOALS??!!
 
-//COOL IDEAS
-//make COLORANDOM colorful
-//
+<!-- WHY IS THIS IMPORTANT FOR TODAY'S GOALS??!!
+
+COOL IDEAS
+make COLORANDOM colorful -->
