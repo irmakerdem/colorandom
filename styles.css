@@ -25,13 +25,12 @@ h1 {
   color: #fffff6;
   margin: 0%;
   padding-top: 4%;
-  /*background-image: url(./colorandom/guy-stevens-dEGu-oCuB1Y-unsplash.jpg);*/
-  /*background-size: cover, contain;*/
-  background-image: url(./colorandom/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
-  background-size: contain;
+  background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: cover;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
+
 .box {
   background-color: #83b2bc;
   height: 200px;
@@ -51,26 +50,6 @@ h1 {
   align-items: center;
   flex-direction: row;
 }
-
-/*.colorblock {
-  border: 3px solid green;
-  background-color: #ffff45;
-  height: 200px;
-  width: 150px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}*/
-
-/*.underbox3 {
-  height: 20%;
-  background-color: orange;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-}*/
 
 .hex-code {
   background-color: #fffff6;
@@ -105,14 +84,15 @@ h1 {
   height: 70px;
   width: 170px;
   background-color: #fffff6;
-  color: black;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
   border-radius: 8px;
-  /*background-image: url(./colorandom/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
-  background-size: cover;*/
+  background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: cover;
 }
 
 .side-bar {
