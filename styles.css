@@ -33,13 +33,14 @@ h1 {
   -webkit-text-stroke-color: black;
 }
 .box {
-  background-color: #fff75f;
+  background-color: #83b2bc;
   height: 200px;
   width: 150px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  border-radius: 8px;
 }
 
 .color-section {
@@ -62,14 +63,14 @@ h1 {
   flex-direction: column;
 }*/
 
-.underbox3 {
+/*.underbox3 {
   height: 20%;
   background-color: orange;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-}
+}*/
 
 .hex-code {
   background-color: #fffff6;
@@ -84,7 +85,6 @@ h1 {
 .lock {
   background-color: #fffff6;
   height: 35px;
-  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +110,7 @@ h1 {
   font-size: 20px;
   cursor: pointer;
   text-align: center;
+  border-radius: 8px;
   /*background-image: url(./colorandom/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
   background-size: cover;*/
 }
