@@ -1,9 +1,8 @@
-/* * {
+/* {
   border: 3px solid blue;
 }*/
 
 body {
-  /* background-color: #0fb9b1; */
   display: flex;
   height: 100vh;
   margin: 0;
@@ -14,41 +13,56 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
   width: 100%;
 }
 
 h1 {
   height: 20%;
-  font-size: 500%;
+  font-size: 700%;
   text-align: center;
-  background-color: #ffff49;
+  color: #fffff6;
+  margin: 0%;
+  padding-top: 4%;
+  /*background-image: url(./colorandom/guy-stevens-dEGu-oCuB1Y-unsplash.jpg);*/
+  /*background-size: cover, contain;*/
+  background-image: url(./colorandom/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: contain;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+.box {
+  background-color: #fff75f;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .color-section {
   height: 80%;
-  background-color: #ad5788;
+  background-color: #fffff6;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
 }
-.box {
-  border: 3px solid blue;
-  height: 150px;
+
+/*.colorblock {
+  border: 3px solid green;
+  background-color: #ffff45;
+  height: 200px;
   width: 150px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-}
-.hex-code {
-  height: 30px;
-  width: 150px;
-}
+}*/
 
-.main-buttons {
+.underbox3 {
   height: 20%;
   background-color: orange;
   display: flex;
@@ -57,15 +71,47 @@ h1 {
   flex-direction: row;
 }
 
+.hex-code {
+  background-color: #fffff6;
+  height: 20px;
+  width: 150px;
+  align-items: center;
+  text-align: center;
+  margin: 0%;
+  padding: 4%;
+}
+
+.lock {
+  background-color: #fffff6;
+  height: 35px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-buttons {
+  height: 20%;
+  background-color: #fffff6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
 .random-button,
 .save-button {
-  height: 54px;
-  width: 150px;
-  background-color: #ff55f9;
-  color: #341aa2;
+  height: 70px;
+  width: 170px;
+  background-color: #fffff6;
+  color: black;
   font-family: "Montserrat", sans-serif;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
+  /*background-image: url(./colorandom/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: cover;*/
 }
 
 .side-bar {
@@ -75,10 +121,12 @@ h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #ffff99;
+  background-color: #fffff6;
+  border-left: 3px solid black;
+  font-family: "Montserrat", sans-serif;
 }
 
-.delete-button {
+/*.delete-button {
   font-family: "Montserrat", sans-serif;
   height: 54px;
   width: 150px;
@@ -87,4 +135,4 @@ h1 {
   color: #341aa2;
   cursor: pointer;
   text-align: center;
-}
+}*/
