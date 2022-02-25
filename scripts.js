@@ -6,6 +6,8 @@
 // feature/initial-readme
 // extensions if we have time
 
+//querySelectorAll grabs ALL elements and stores them in the variable as an array
+
 //QUERY SELECTORS//
 var square1 = document.querySelector("#boxOne");
 var square2 = document.querySelector("#boxTwo");
@@ -14,7 +16,7 @@ var square4 = document.querySelector("#boxFour");
 var square5 = document.querySelector("#boxFive");
 var randomButton = document.querySelector(".random-button");
 var allBoxes = document.querySelectorAll(".box");
-var hexCodes = document.querySelector(".hex-code");
+var hexCodes = document.querySelectorAll(".hex-code");
 var colorBlocks = document.querySelectorAll(".color-block");
 
 
@@ -30,8 +32,17 @@ function getNewPalette(){
     square3.style.backgroundColor = newPalette.colors[2].hex;
     square4.style.backgroundColor = newPalette.colors[3].hex;
     square5.style.backgroundColor = newPalette.colors[4].hex;
+
+    hexCodes[0].innerText = newPalette.colors[0].hex;
+    hexCodes[1].innerText = newPalette.colors[1].hex;
+    hexCodes[2].innerText = newPalette.colors[2].hex;
+    hexCodes[3].innerText = newPalette.colors[3].hex;
+    hexCodes[4].innerText = newPalette.colors[4].hex;
 };
 // event.preventDefault();
+
+
+
 
 //FUNCTIONS//
 // function insertHex() {
