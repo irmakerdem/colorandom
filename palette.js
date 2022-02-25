@@ -6,12 +6,18 @@
 
 //should have 5 colors, each paletee has unique ID (Date.now?)
 
+//can we use palette to instantiate set of 5 Colors
+//array of colors method call
 class Palette {
   constructor() {
-    this.color = 5;
-    this.id = id;
+    this.colors = [new Color(), new Color(), new Color(), new Color(), new Color()];
+    // this.id = id;
   }
 };
+
+//incorporate newpalette.colors with display?
+//this.colors = [new Color()]
+//when instantiate palette, expect palette to have colors property - 5 Color objects which are newly instantiated
 
     //how get hexcode over to palette class and display in one box?
     //then can loop
