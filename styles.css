@@ -106,9 +106,24 @@ h1 {
   border-left: 3px solid black;
   font-family: "Montserrat", sans-serif;
 }
+
+.display-palettes {
+  background-color: #83b2bc;
+  height: 200px;
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  transform: scale(0.25);
+}
+
 .hidden{
 display: none;
 }
+
 /*.delete-button {
   font-family: "Montserrat", sans-serif;
   height: 54px;
