@@ -5,6 +5,9 @@
 // extensions if we have time
 
 //querySelectorAll grabs ALL elements and stores them in the variable as an array
+//GLOBAL VARIABLES//
+var savedPalettes = [];
+var palette = new Palette;
 
 //QUERY SELECTORS//
 var square1 = document.querySelector("#boxOne");
@@ -24,6 +27,7 @@ window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
 saveButton.addEventListener("click", savePalette);
 
+// //FUNCTIONS//
 
 function getNewPalette() {
   var newPalette = new Palette();
@@ -42,21 +46,22 @@ function getNewPalette() {
 }
 // event.preventDefault();
 
-// //FUNCTIONS//
-
 function savePalette(){
   hide(lockImages);
   hide(hexCodes);
-  this.id = data- attribute!
+  savedPalettes.push(palette);
+  palette = new Palette;
+  //NEXT: Need to take the saved array and display array, hooray, and yay...in css
 };
 
-function show(element) {
-  element.classList.remove("hidden");
-};
 
-function hide(element) {
-  element.classList.add("hidden");
-};
+// function show(element) {
+//   element.classList.remove("hidden");
+// };
+//
+// function hide(element) {
+//   element.classList.add("hidden");
+// };
 
 //window load new palette instantiate
 var newPalette = new Palette();
@@ -68,8 +73,3 @@ console.log(newPalette.colors);
 // function insertColors(){
 // for (var i = 0; i < allBoxes.length; i++)
 // }
-
-
-//change flex to squishier, and transform: to smaller -css
-//"store" array / new instance of palatte in right side bar
-//refresh  page to load new palatte
