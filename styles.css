@@ -106,7 +106,9 @@ h1 {
   border-left: 3px solid black;
   font-family: "Montserrat", sans-serif;
 }
-
+.hidden{
+display: none;
+}
 /*.delete-button {
   font-family: "Montserrat", sans-serif;
   height: 54px;
@@ -117,3 +119,7 @@ h1 {
   cursor: pointer;
   text-align: center;
 }*/
+
+/*.box {
+  transform: scale(0.25); /* Equal to scaleX(2) scaleY(0.5)
+  } */
