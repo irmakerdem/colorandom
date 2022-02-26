@@ -21,13 +21,16 @@ var hexCodes = document.querySelectorAll(".hex-code");
 var colorBlocks = document.querySelectorAll(".color-block");
 var saveButton = document.querySelector(".save-button");
 var lockImages = document.querySelectorAll(".lock");
+var sideBar = document.querySelector(".side-bar");
 
 //EVENT LISTENERS//
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
 saveButton.addEventListener("click", savePalette);
+saveButton.addEventListener("click", displayMiniPalette);
 
 // //FUNCTIONS//
+//click random, unique id needs to be tied to generated five hex code colors, 1 palette = 1 id, 5 hex codes, if click save, that unique id needs to go into array of saved palettes
 
 function getNewPalette() {
   var newPalette = new Palette();
@@ -46,15 +49,18 @@ function getNewPalette() {
 }
 // event.preventDefault();
 
-function savePalette(){
-  hide(lockImages);
-  hide(hexCodes);
-  savedPalettes.push(palette);
-  palette = new Palette;
-  //NEXT: Need to take the saved array and display array, hooray, and yay...in css
-};
+// function savePalette(){
+//   // hide(lockImages);
+//   // hide(hexCodes);
+//   savedPalettes.push(palette);
+//   palette = new Palette;
+//   //NEXT: Need to take the saved array and display array, hooray, and yay...in css
+// };
 
-
+function displayMiniPalette(){
+savedPalettes.style = palette.colors[0];
+savedPalettes.style = palette.colors[1];
+}
 // function show(element) {
 //   element.classList.remove("hidden");
 // };
@@ -66,6 +72,22 @@ function savePalette(){
 //window load new palette instantiate
 var newPalette = new Palette();
 console.log(newPalette.colors);
+
+//savedPalettes
+function savePalette() {
+  sideBar.innerHTML = "";
+  for (var i = 0; i < allBoxes.length; i ++) { allBoxes.innerHTML +=
+  `<article class="side-bar">
+    <h2 class="saved-palettes">Saved Palettes</h2>
+    <section>
+      <div class = "display-palettes"> </div>
+      <button class="delete-button hidden">DELETE</button>
+    </section>
+  </article>`
+  savedPalettes.push(palette)
+ }
+}
+
 
 //on button click iterate through all colors in palette, and attach them to boxes
 // allBoxes[i].style.backgroundColor = hex;
