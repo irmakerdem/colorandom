@@ -24,7 +24,10 @@ saveButton.addEventListener("click", function() {
   savePalette()
   addHTML()
 });
-colorBlock.addEventListener("click", lockColor);
+colorBlock.addEventListener("click", function(event) {
+  lockColor(event)
+//boss function here ^
+});
 
 function getRandomColor() {
   var allCharacters = 'ABCDEF0123456789';
@@ -71,11 +74,16 @@ function addHTML() {
   </section>`;
  }
 
- function lockColor(){
-   console.log("hi Mikey!")
-   if (){
-
-
- lock.style.content= "url(./images/locked.png)"
+ function lockColor(event){
+   if (event.target.id === "boxOne") {
+     //change maybe to "0" to keep straight with array position
+     newPalette.colors[0].locked = true
+        console.log(newPalette);
+     lock.style.content= "url(./images/locked.png)"
+   }
+   //HEY!!!! move to palette class and add unlock method
+   //ids can be anything, maybe switch to number give box 0-4
+   //parse int -takes string and makes into a number
 }
-}
+//option 1- checks if unlocked or locked then runs the appropriate function
+//option2- lock function turns into method w/in palette class, unlock() and
