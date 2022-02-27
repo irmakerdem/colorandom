@@ -48,7 +48,8 @@ function getNewPalette() {
   var color3 = getRandomColor();
   var color4 = getRandomColor();
   var color5 = getRandomColor();
-  newPalette = new Palette(color1, color2, color3, color4, color5);
+  newPalette.colors = [color1, color2, color3, color4, color5];
+
   //for loop over every color in palette and
   square1.style.backgroundColor = newPalette.colors[0].hex;
   square2.style.backgroundColor = newPalette.colors[1].hex;
@@ -66,14 +67,46 @@ function getNewPalette() {
 
 function savePalette() {
   // var newPalette = new Palette();
-  var something = new Palette(newPalette.colors[0], newPalette.colors[1], newPalette.colors[2], newPalette.colors[3], newPalette.colors[4]);
-  return savedPalettes.push(something);
+  var saveCurrent = new Palette(newPalette.colors[0], newPalette.colors[1], newPalette.colors[2], newPalette.colors[3], newPalette.colors[4]);
+  savedPalettes.push(saveCurrent);
+  displayPalette();
  }
 
+ function displayPalette() {
+   // savedPalettes.style = palette.colors[0];
+   console.log(newPalette);
+   console.log(newPalette.colors);
 
-console.log(newPalette);
-console.log(newPalette.colors);
-console.log(savedPalettes);
+   var miniPalette = document.createElement("div");
+   miniPalette.classList.add("mini-palette");
+   sideBar.appendChild(miniPalette);
+
+   sideBar.style.backgroundColor = savedPalettes.colors;
+
+};
+
+
+   // function show(element) {
+   //   element.classList.remove("hidden");
+   // };
+   //
+   // function hide(element) {
+   //   element.classList.add("hidden");
+   // };
+
+  //  sideBar.innerHTML = "";
+  //  for (var i = 0; i < allBoxes.length; i ++) {
+  //    allBoxes.innerHTML +=
+  //  `<article class="side-bar">
+  //    <h2 class="saved-palettes">Saved Palettes</h2>
+  //    <section>
+  //      <div class = "display-palettes"></div>
+  //      <button class="delete-button hidden">DELETE</button>
+  //    </section>
+  //  </article>`
+  // }
+
+
 
 // function savePalette(){
 //   // hide(lockImages);
@@ -89,29 +122,8 @@ console.log(savedPalettes);
 // }
 
 
-// function show(element) {
-//   element.classList.remove("hidden");
-// };
-//
-// function hide(element) {
-//   element.classList.add("hidden");
-// };
 
 
-//savedPalettes
-// function savePalette() {
-//   sideBar.innerHTML = "";
-//   for (var i = 0; i < allBoxes.length; i ++) { allBoxes.innerHTML +=
-//   `<article class="side-bar">
-//     <h2 class="saved-palettes">Saved Palettes</h2>
-//     <section>
-//       <div class = "display-palettes"> </div>
-//       <button class="delete-button hidden">DELETE</button>
-//     </section>
-//   </article>`
-//   savedPalettes.push(palette)
-//  }
-// }
 
 
 //on button click iterate through all colors in palette, and attach them to boxes

@@ -9,15 +9,8 @@
 //can we use palette to instantiate set of 5 Colors
 //array of colors method call
 class Palette {
-  constructor(c1, c2, c3, c4, c5) {
-    this.colors = [
-      c1, c2, c3, c4, c5
-      // new Color(),
-      // new Color(),
-      // new Color(),
-      // new Color(),
-      // new Color(),
-    ];
+  constructor(color1, color2, color3, color4, color5) {
+    this.colors = [color1, color2, color3, color4, color5];
     this.id = Date.now();
   }
 }
