@@ -22,7 +22,7 @@ h1 {
   height: 20%;
   font-size: 700%;
   text-align: center;
-  color: #fffff6;
+  color: #ffffff;
   margin: 0%;
   padding-top: 4%;
   background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
@@ -40,11 +40,12 @@ h1 {
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
+  border: 2px solid black;
 }
 
 .color-section {
   height: 80%;
-  background-color: #fffff6;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -52,7 +53,7 @@ h1 {
 }
 
 .hex-code {
-  background-color: #fffff6;
+  background-color: #ffffff;
   height: 20px;
   width: 150px;
   align-items: center;
@@ -62,7 +63,7 @@ h1 {
 }
 
 .lock {
-  background-color: #fffff6;
+  background-color: #ffffff;
   height: 35px;
   display: flex;
   justify-content: center;
@@ -72,7 +73,7 @@ h1 {
 
 .main-buttons {
   height: 20%;
-  background-color: #fffff6;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -81,18 +82,20 @@ h1 {
 
 .random-button,
 .save-button {
-  height: 70px;
-  width: 170px;
-  background-color: #fffff6;
+  height: 88px;
+  width: 200px;
+  background-color: #ffffff;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 27px;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   border-radius: 8px;
   background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
   background-size: cover;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
 }
 
 .side-bar {
@@ -102,39 +105,68 @@ h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #fffff6;
+  background-color: #ffffff;
   border-left: 3px solid black;
   font-family: "Montserrat", sans-serif;
 }
 
+.display {
+  height:5%;
+  width:95%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 15%;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0%;
+  padding-top: 4%;
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+.little-sections{
+  border: 2px solid black;
+  height:90%;
+  width:15%;
+}
+
 .display-palettes {
   background-color: #83b2bc;
-  height: 200px;
-  width: 25%;
+  height: 90%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  border-radius: 8px;
-  transform: scale(0.25);
 }
 
 .hidden{
 display: none;
 }
 
-/*.delete-button {
+.delete-button {
   font-family: "Montserrat", sans-serif;
-  height: 54px;
-  width: 150px;
-  display: flex;
-  background-color: #87189e;
-  color: #341aa2;
+  height: 45px;
+  width: 110px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
-}*/
-
-/*.box {
-  transform: scale(0.25); /* Equal to scaleX(2) scaleY(0.5)
-  } */
+  border-radius: 8px;
+  background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
+  background-size: cover;
+  margin: 2%;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
+}

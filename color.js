@@ -4,8 +4,3 @@ class Color {
     this.hex = hex;
   }
 };
-
-//
-// lockColors(){
-//   //if color.unlocked = true, can run get randomColor
-// };
