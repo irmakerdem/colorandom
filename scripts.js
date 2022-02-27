@@ -23,13 +23,15 @@ var saveButton = document.querySelector(".save-button");
 var lockImages = document.querySelectorAll(".lock");
 var sideBar = document.querySelector(".side-bar");
 
+
 //EVENT LISTENERS//
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
 saveButton.addEventListener("click", function() {
   savePalette()
+  addHTML()
 });
-// saveButton.addEventListener("click", displayMiniPalette);
+
 
 // //FUNCTIONS//
 //click random, unique id needs to be tied to generated five hex code colors, 1 palette = 1 id, 5 hex codes, if click save, that unique id needs to go into array of saved palettes
@@ -69,21 +71,37 @@ function savePalette() {
   // var newPalette = new Palette();
   var saveCurrent = new Palette(newPalette.colors[0], newPalette.colors[1], newPalette.colors[2], newPalette.colors[3], newPalette.colors[4]);
   savedPalettes.push(saveCurrent);
-  displayPalette();
+  //displayPalette();
  }
 
- function displayPalette() {
+function addHTML() {
+  sideBar.innerHTML +=
+  `<section class="display">
+    <div class="little-sections" style="background-color:${newPalette.colors[0].hex}"></div>
+    <div class="little-sections" style="background-color:${newPalette.colors[1].hex}"></div>
+    <div class="little-sections" style="background-color:${newPalette.colors[2].hex}"></div>
+    <div class="little-sections" style="background-color:${newPalette.colors[3].hex}"></div>
+    <div class="little-sections" style="background-color:${newPalette.colors[4].hex}"></div>
+    <button class="delete-button">Delete</button>
+  </section>`;
+
+ }
+
+
+ //function displayPalette() {
+
+ //};
    // savedPalettes.style = palette.colors[0];
-   console.log(newPalette);
-   console.log(newPalette.colors);
-
-   var miniPalette = document.createElement("div");
-   miniPalette.classList.add("mini-palette");
-   sideBar.appendChild(miniPalette);
-
-   sideBar.style.backgroundColor = savedPalettes.colors;
+   // console.log(newPalette);
+   // console.log(newPalette.colors);
+   //
+   // var miniPalette = document.createElement("div");
+   // miniPalette.classList.add("mini-palette");
+   // sideBar.appendChild(miniPalette);
+   //
+   // sideBar.style.backgroundColor = savedPalettes.colors;
 //work on building HTML first, then JS- create sections
-};
+
 //interpolate HERE!
 
 
@@ -95,17 +113,6 @@ function savePalette() {
    //   element.classList.add("hidden");
    // };
 
-  //  sideBar.innerHTML = "";
-  //  for (var i = 0; i < allBoxes.length; i ++) {
-  //    allBoxes.innerHTML +=
-  //  `<article class="side-bar">
-  //    <h2 class="saved-palettes">Saved Palettes</h2>
-  //    <section>
-  //      <div class = "display-palettes"></div>
-  //      <button class="delete-button hidden">DELETE</button>
-  //    </section>
-  //  </article>`
-  // }
 
 
 
