@@ -15,12 +15,18 @@ var randomButton = document.querySelector(".random-button");
 var hexCodes = document.querySelectorAll(".hex-code");
 var saveButton = document.querySelector(".save-button");
 var sideBar = document.querySelector(".side-bar");
+var lock = document.querySelector(".lock");
+var colorBlock = document.querySelector(".color-block");
 
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
 saveButton.addEventListener("click", function() {
   savePalette()
   addHTML()
+});
+colorBlock.addEventListener("click", function(event) {
+  lockColor(event)
+//boss function here ^
 });
 
 function getRandomColor() {
@@ -67,3 +73,17 @@ function addHTML() {
     <button class="delete-button">Delete</button>
   </section>`;
  }
+
+ function lockColor(event){
+   if (event.target.id === "boxOne") {
+     //change maybe to "0" to keep straight with array position
+     newPalette.colors[0].locked = true
+        console.log(newPalette);
+     lock.style.content= "url(./images/locked.png)"
+   }
+   //HEY!!!! move to palette class and add unlock method
+   //ids can be anything, maybe switch to number give box 0-4
+   //parse int -takes string and makes into a number
+}
+//option 1- checks if unlocked or locked then runs the appropriate function
+//option2- lock function turns into method w/in palette class, unlock() and

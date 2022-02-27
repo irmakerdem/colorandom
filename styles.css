@@ -33,7 +33,7 @@ h1 {
 
 .box {
   background-color: #83b2bc;
-  height: 200px;
+  height: 150px;
   width: 150px;
   display: flex;
   justify-content: flex-end;
@@ -44,8 +44,14 @@ h1 {
 }
 
 .color-section {
-  height: 80%;
+  height: 70%;
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.lock-hex{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -54,12 +60,16 @@ h1 {
 
 .hex-code {
   background-color: #ffffff;
-  height: 20px;
-  width: 150px;
+  height: 30px;
+  width: 94px;
+  font-size: 16pt;
+  font-weight: bold;
   align-items: center;
   text-align: center;
+  justify-content: center;
   margin: 0%;
-  padding: 4%;
+  padding: 0%;
+
 }
 
 .lock {
@@ -72,10 +82,11 @@ h1 {
 }
 
 .main-buttons {
-  height: 20%;
+  height: 30%;
+  width: 100%;
   background-color: #ffffff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
   flex-direction: row;
 }
@@ -137,6 +148,7 @@ h2 {
   border: 2px solid black;
   height:90%;
   width:15%;
+  border-radius: 6px;
 }
 
 .display-palettes {
