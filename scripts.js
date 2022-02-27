@@ -82,8 +82,9 @@ function savePalette() {
    sideBar.appendChild(miniPalette);
 
    sideBar.style.backgroundColor = savedPalettes.colors;
-
+//work on building HTML first, then JS- create sections
 };
+//interpolate HERE!
 
 
    // function show(element) {
