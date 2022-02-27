@@ -14,20 +14,19 @@ innerHTML is property that holds the HTML that lives inside of a given element (
     <main>
       <h1 class="page-title">COLORandom</h1>
       <section class="color-section">
+        <section class="color-block" id="colorBlockOne">
         <article class="box" id="boxOne">
-          <section class="color-block hidden" id="colorBlockOne" />
-          <p class="hex-code" id="hexCodeOne">""</p>
-          <img
-            class="lock"
-            <!-- default: show unlock, hide lock  -->
-            id="lockOne"
-            src="./images/unlocked.png"
-            src="./images/locked.png hidden"
-            alt="black lock icon"
-          />
         </article>
+        <section class="lock-hex">
+          <img class="lock" id="lockOne" src="./images/unlocked.png" alt="black unlocked icon" >
+          <img class="unlock hidden" id="lockOne" src="./images/locked.png" alt="black locked icon" >
+            <div class="hex-code" id="hexCodeOne"></div>
+        </section>
+        </section>
+        
+
         <article class="box" id="boxTwo">
-          <section class="color-block hidden" id="colorBlockTwo" />
+          <section class="color-block hidden" id="colorBlockTwo">
           <p class="hex-code hidden" id="hexCodeTwo">#123456</p>
           <img
             class="lock hidden"

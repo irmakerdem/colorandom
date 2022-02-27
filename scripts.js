@@ -15,6 +15,8 @@ var randomButton = document.querySelector(".random-button");
 var hexCodes = document.querySelectorAll(".hex-code");
 var saveButton = document.querySelector(".save-button");
 var sideBar = document.querySelector(".side-bar");
+var lock = document.querySelector(".lock");
+var colorBlock = document.querySelector(".color-block");
 
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
@@ -22,6 +24,7 @@ saveButton.addEventListener("click", function() {
   savePalette()
   addHTML()
 });
+colorBlock.addEventListener("click", lockColor);
 
 function getRandomColor() {
   var allCharacters = 'ABCDEF0123456789';
@@ -67,3 +70,12 @@ function addHTML() {
     <button class="delete-button">Delete</button>
   </section>`;
  }
+
+ function lockColor(){
+   console.log("hi Mikey!")
+   if (){
+
+
+ lock.style.content= "url(./images/locked.png)"
+}
+}
