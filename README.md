@@ -37,9 +37,9 @@ With this app you can generate a randomly selected color palette and create a po
 
 ### How to Set Up
 
--  clone this repo
+-  Clone this [repo](https://github.com/irmakerdem/colorandom)
 - `cd` into the directory
-- run `open index.html`
+- Run `open index.html`
 
 ### Future Features
 - Add dropdown to provide options for palettes based on shared color attributes, for a more cohesive palette.
@@ -49,4 +49,4 @@ With this app you can generate a randomly selected color palette and create a po
 
 With three team-members across two time zones, clear communication and scheduling were imperative. We used a detailed spreadsheet to keep track of each task within each iteration. We also utilized daily morning stand-ups to check progress and ensure all team-members were informed of changes. We paired-programmed the entire project to maximize learning.
 
-![Screen Shot 2022-02-25 at 7 20 08 PM](https://user-images.githubusercontent.com/93603551/156059767-d3543187-3851-4c84-86bb-335cbfea0d23.png)
+![Screen Shot of Excel Project Checklist](https://user-images.githubusercontent.com/93603551/156059767-d3543187-3851-4c84-86bb-335cbfea0d23.png)
