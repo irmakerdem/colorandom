@@ -1,6 +1,4 @@
- {
-  border: 3px solid blue;
-}
+/* GENERAL */
 body {
   display: flex;
   height: 100vh;
@@ -8,6 +6,7 @@ body {
   padding: 0;
   font-family: “Montserrat”, sans-serif;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -15,6 +14,7 @@ main {
   align-content: center;
   width: 100%;
 }
+
 h1 {
   height: 20%;
   font-size: 700%;
@@ -27,6 +27,8 @@ h1 {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
+
+/* MAIN COLOR SECTION */
 .box {
   background-color: #83b2bc;
   height: 150px;
@@ -38,22 +40,23 @@ h1 {
   border-radius: 8px;
   border: 2px solid black;
 }
+
 .color-section {
   height: 70%;
   background-color: #fffff6;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 0%;
 }
+
 .lock-hex {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
 }
+
 .hex-code {
   background-color: #ffffff;
   height: 30px;
@@ -65,6 +68,7 @@ h1 {
   justify-content: center;
   padding: 0%;
 }
+
 .lock {
   background-color: #ffffff;
   height: 35px;
@@ -90,10 +94,9 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  flex-direction: row;
 }
-.random-button,
-.save-button {
+
+.random-button, .save-button {
   height: 88px;
   width: 200px;
   background-color: #ffffff;
@@ -109,6 +112,8 @@ h1 {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
 }
+
+/* SIDE BAR */
 .side-bar {
   width: 25%;
   height: 100vh;
@@ -120,17 +125,18 @@ h1 {
   border-left: 3px solid black;
   font-family: “Montserrat”, sans-serif;
 }
+
 .display {
   height: 5%;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: row;
   text-align: center;
   justify-content: space-evenly;
   margin: 15%;
 }
+
 h2 {
   font-size: 50px;
   text-align: center;
@@ -141,12 +147,14 @@ h2 {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
+
 .little-sections {
   border: 2px solid black;
   height: 90%;
   width: 15%;
   border-radius: 6px;
 }
+
 .display-palettes {
   background-color: #83b2bc;
   height: 90%;
@@ -154,12 +162,13 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
 }
+
 .hidden {
   display: none;
 }
+
 .delete-button {
   font-family: “Montserrat”, sans-serif;
   height: 45px;
