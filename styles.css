@@ -1,15 +1,13 @@
-/* * {
+{
   border: 3px solid blue;
-} */
-
+}
 body {
   display: flex;
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: “Montserrat”, sans-serif;
 }
-
 main {
   display: flex;
   flex-direction: column;
@@ -17,12 +15,11 @@ main {
   align-content: center;
   width: 100%;
 }
-
 h1 {
   height: 20%;
   font-size: 700%;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0%;
   padding-top: 4%;
   background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
@@ -30,9 +27,8 @@ h1 {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
-
 .box {
-  background-color: #83b2bc;
+  background-color: #83B2BC;
   height: 150px;
   width: 150px;
   display: flex;
@@ -42,14 +38,15 @@ h1 {
   border-radius: 8px;
   border: 2px solid black;
 }
-
 .color-section {
-  height: 70%;
-  background-color: #ffffff;
+  height: 80%;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 8%;
 }
 .lock-hex{
   display: flex;
@@ -57,9 +54,8 @@ h1 {
   align-items: center;
   flex-direction: row;
 }
-
 .hex-code {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   height: 30px;
   width: 94px;
   font-size: 16pt;
@@ -69,35 +65,31 @@ h1 {
   justify-content: center;
   margin: 0%;
   padding: 0%;
-
 }
-
 .lock {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
 .main-buttons {
-  height: 30%;
+  height: 20%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
 }
-
 .random-button,
 .save-button {
   height: 88px;
   width: 200px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: “Montserrat”, sans-serif;
   font-size: 27px;
   font-weight: bold;
   cursor: pointer;
@@ -108,7 +100,6 @@ h1 {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
 }
-
 .side-bar {
   width: 25%;
   height: 100vh;
@@ -116,11 +107,10 @@ h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-left: 3px solid black;
-  font-family: "Montserrat", sans-serif;
+  font-family: “Montserrat”, sans-serif;
 }
-
 .display {
   height:5%;
   width:95%;
@@ -132,27 +122,24 @@ h1 {
   justify-content: space-evenly;
   margin: 15%;
 }
-
 h2 {
   font-size: 50px;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0%;
   padding-top: 4%;
-  font-family: "Montserrat", sans-serif;
+  font-family: “Montserrat”, sans-serif;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
-
 .little-sections{
   border: 2px solid black;
   height:90%;
   width:15%;
   border-radius: 6px;
 }
-
 .display-palettes {
-  background-color: #83b2bc;
+  background-color: #83B2BC;
   height: 90%;
   width: 100%;
   display: flex;
@@ -161,13 +148,11 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .hidden{
 display: none;
 }
-
 .delete-button {
-  font-family: "Montserrat", sans-serif;
+  font-family: “Montserrat”, sans-serif;
   height: 45px;
   width: 110px;
   color: white;

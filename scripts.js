@@ -16,7 +16,9 @@ var hexCodes = document.querySelectorAll(".hex-code");
 var saveButton = document.querySelector(".save-button");
 var sideBar = document.querySelector(".side-bar");
 var lock = document.querySelector(".lock");
-var colorBlock = document.querySelector(".color-block");
+var colorBlock = document.querySelectorAll(".color-block");
+var colorSection = document.querySelector(".color-section");
+var colorBlockOne = document.querySelector("#colorBlockOne");
 
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
@@ -24,7 +26,7 @@ saveButton.addEventListener("click", function() {
   savePalette()
   addHTML()
 });
-colorBlock.addEventListener("click", function(event) {
+colorSection.addEventListener("click", function(event) {
   lockColor(event)
 //boss function here ^
 });
@@ -37,6 +39,11 @@ function getRandomColor() {
   } return new Color(hex);
 };
 
+//ALEX's NOTES //
+//only have get new palette function on load
+//then create new function for new palette that checks for unlocked, then splice color out
+// OR change palette class so it generates new colors in palette class
+
 function getNewPalette() {
   var color1 = getRandomColor();
   var color2 = getRandomColor();
@@ -44,6 +51,12 @@ function getNewPalette() {
   var color4 = getRandomColor();
   var color5 = getRandomColor();
   newPalette.colors = [color1, color2, color3, color4, color5];
+//   for(var i = 0; i < 5; i++){
+//     console.log(newPalette.colors);
+//   if(!newPalette.colors[0].locked){
+//   newPalette.colors.splice(i, 1, new Color)
+//   }
+// }
   square1.style.backgroundColor = newPalette.colors[0].hex;
   square2.style.backgroundColor = newPalette.colors[1].hex;
   square3.style.backgroundColor = newPalette.colors[2].hex;
@@ -75,15 +88,22 @@ function addHTML() {
  }
 
  function lockColor(event){
-   if (event.target.id === "boxOne") {
-     //change maybe to "0" to keep straight with array position
-     newPalette.colors[0].locked = true
+   newPalette.giveIDs()
+   //loop, go through all boxes, if this target event was clicked, changed locked - true,
+   console.log(event.target.closest(".color-block").id, newPalette.colors[0].id);
+   for (var i = 0; i < 5; i++){
+     if (event.target.closest(".color-block").id ===       newPalette.colors[i].id) {
+        newPalette.colors[i].locked = true
         console.log(newPalette);
-     lock.style.content= "url(./images/locked.png)"
-   }
-   //HEY!!!! move to palette class and add unlock method
-   //ids can be anything, maybe switch to number give box 0-4
+        lock.style.content = "url(./images/locked.png)"
+   // }
+ } //HEY!!!! move to palette class and add unlock method
    //parse int -takes string and makes into a number
 }
+}
+
+
+//assign each color w id, match place on page/in html w id 0-4
+//if ids match, lock or unlock
 //option 1- checks if unlocked or locked then runs the appropriate function
 //option2- lock function turns into method w/in palette class, unlock() and
