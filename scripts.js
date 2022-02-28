@@ -1,7 +1,6 @@
 // feature/4-lock-colors
 // feature/5-delete-saved-palette
 // feature/initial-readme
-// extensions if we have time
 
 var newPalette = new Palette();
 var savedPalettes = [];
@@ -15,29 +14,29 @@ var randomButton = document.querySelector(".random-button");
 var hexCodes = document.querySelectorAll(".hex-code");
 var saveButton = document.querySelector(".save-button");
 var sideBar = document.querySelector(".side-bar");
-var lock = document.querySelector(".lock");
-var colorBlock = document.querySelectorAll(".color-block");
+var lock = document.querySelectorAll(".lock");
+var colorBlock = document.querySelector(".color-block");
 var colorSection = document.querySelector(".color-section");
 var colorBlockOne = document.querySelector("#colorBlockOne");
 
 window.addEventListener("load", getNewPalette);
 randomButton.addEventListener("click", getNewPalette);
-saveButton.addEventListener("click", function() {
-  savePalette()
-  addHTML()
+saveButton.addEventListener("click", function () {
+  savePalette();
+  addHTML();
 });
-colorSection.addEventListener("click", function(event) {
-  lockColor(event)
-//boss function here ^
+colorSection.addEventListener("click", function (event) {
+  lockColor(event);
 });
 
 function getRandomColor() {
-  var allCharacters = 'ABCDEF0123456789';
-  var hex = '#';
+  var allCharacters = "ABCDEF0123456789";
+  var hex = "#";
   for (var i = 0; i < 6; i++) {
-    hex = hex + allCharacters[Math.floor(Math.random() * 16)]
-  } return new Color(hex);
-};
+    hex = hex + allCharacters[Math.floor(Math.random() * 16)];
+  }
+  return new Color(hex);
+}
 
 //ALEX's NOTES //
 //only have get new palette function on load
@@ -51,12 +50,12 @@ function getNewPalette() {
   var color4 = getRandomColor();
   var color5 = getRandomColor();
   newPalette.colors = [color1, color2, color3, color4, color5];
-//   for(var i = 0; i < 5; i++){
-//     console.log(newPalette.colors);
-//   if(!newPalette.colors[0].locked){
-//   newPalette.colors.splice(i, 1, new Color)
-//   }
-// }
+  //   for(var i = 0; i < 5; i++){
+  //     console.log(newPalette.colors);
+  //   if(!newPalette.colors[0].locked){
+  //   newPalette.colors.splice(i, 1, new Color)
+  //   }
+  // }
   square1.style.backgroundColor = newPalette.colors[0].hex;
   square2.style.backgroundColor = newPalette.colors[1].hex;
   square3.style.backgroundColor = newPalette.colors[2].hex;
@@ -71,13 +70,18 @@ function getNewPalette() {
 // event.preventDefault();
 
 function savePalette() {
-  var saveCurrent = new Palette(newPalette.colors[0], newPalette.colors[1], newPalette.colors[2], newPalette.colors[3], newPalette.colors[4]);
+  var saveCurrent = new Palette(
+    newPalette.colors[0],
+    newPalette.colors[1],
+    newPalette.colors[2],
+    newPalette.colors[3],
+    newPalette.colors[4]
+  );
   savedPalettes.push(saveCurrent);
- }
+}
 
 function addHTML() {
-  sideBar.innerHTML +=
-  `<section class="display">
+  sideBar.innerHTML += `<section class="display">
     <div class="little-sections" style="background-color:${newPalette.colors[0].hex}"></div>
     <div class="little-sections" style="background-color:${newPalette.colors[1].hex}"></div>
     <div class="little-sections" style="background-color:${newPalette.colors[2].hex}"></div>
@@ -85,25 +89,22 @@ function addHTML() {
     <div class="little-sections" style="background-color:${newPalette.colors[4].hex}"></div>
     <button class="delete-button">Delete</button>
   </section>`;
- }
-
- function lockColor(event){
-   newPalette.giveIDs()
-   //loop, go through all boxes, if this target event was clicked, changed locked - true,
-   console.log(event.target.closest(".color-block").id, newPalette.colors[0].id);
-   for (var i = 0; i < 5; i++){
-     if (event.target.closest(".color-block").id ===       newPalette.colors[i].id) {
-        newPalette.colors[i].locked = true
-        console.log(newPalette);
-        lock.style.content = "url(./images/locked.png)"
-   // }
- } //HEY!!!! move to palette class and add unlock method
-   //parse int -takes string and makes into a number
-}
 }
 
-
-//assign each color w id, match place on page/in html w id 0-4
-//if ids match, lock or unlock
-//option 1- checks if unlocked or locked then runs the appropriate function
-//option2- lock function turns into method w/in palette class, unlock() and
+function lockColor(event) {
+  //takes our strings of data and parses them into index, array
+  var id = parseInt(event.target.dataset.index);
+  if (newPalette.colors[id].locked) {
+    newPalette.unlock(id);
+    lock[id].style.content = "url(./images/unlocked.png)";
+    //unlock[id].classList.remove("hidden");
+  } else {
+    newPalette.lock(id);
+    lock[id].style.content = "url(./images/locked.png)";
+    //  unlock[id].classList.add("hidden");
+  }
+  console.log(id);
+  console.log(newPalette);
+}
+//  if (event.target.closest(".color-block").id ===newPalette.colors[i].id) {
+//      newPalette.colors[i].locked = true
