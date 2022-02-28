@@ -1,4 +1,4 @@
-{
+ {
   border: 3px solid blue;
 }
 body {
@@ -19,7 +19,7 @@ h1 {
   height: 20%;
   font-size: 700%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0%;
   padding-top: 4%;
   background-image: url(./images/robert-katzki-jbtfM0XBeRc-unsplash.jpg);
@@ -28,7 +28,7 @@ h1 {
   -webkit-text-stroke-color: black;
 }
 .box {
-  background-color: #83B2BC;
+  background-color: #83b2bc;
   height: 150px;
   width: 150px;
   display: flex;
@@ -39,23 +39,23 @@ h1 {
   border: 2px solid black;
 }
 .color-section {
-  height: 80%;
-  background-color: #FFFFFF;
+  height: 70%;
+  background-color: #fffff6;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 8%;
+  margin-top: 0%;
 }
-.lock-hex{
+.lock-hex {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
 }
 .hex-code {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 30px;
   width: 94px;
   font-size: 16pt;
@@ -63,21 +63,30 @@ h1 {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: 0%;
   padding: 0%;
 }
 .lock {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
+.unlock {
+  background-color: #ffffff;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .main-buttons {
-  height: 20%;
+  height: 30%;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -87,7 +96,7 @@ h1 {
 .save-button {
   height: 88px;
   width: 200px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: white;
   font-family: “Montserrat”, sans-serif;
   font-size: 27px;
@@ -107,13 +116,13 @@ h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-left: 3px solid black;
   font-family: “Montserrat”, sans-serif;
 }
 .display {
-  height:5%;
-  width:95%;
+  height: 5%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -125,21 +134,21 @@ h1 {
 h2 {
   font-size: 50px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0%;
   padding-top: 4%;
   font-family: “Montserrat”, sans-serif;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
-.little-sections{
+.little-sections {
   border: 2px solid black;
-  height:90%;
-  width:15%;
+  height: 90%;
+  width: 15%;
   border-radius: 6px;
 }
 .display-palettes {
-  background-color: #83B2BC;
+  background-color: #83b2bc;
   height: 90%;
   width: 100%;
   display: flex;
@@ -148,8 +157,8 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.hidden{
-display: none;
+.hidden {
+  display: none;
 }
 .delete-button {
   font-family: “Montserrat”, sans-serif;
